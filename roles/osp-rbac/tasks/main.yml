@@ -20,10 +20,6 @@
       cert: "{{ user_key }}"
       cacert: "{{ user_cacert }}"
 
-
-
-
-
   - name: create users
     os_user:
     name: "{{ os_user }}"
@@ -36,4 +32,13 @@
     key: " {{ user_key }}"
     cacert: "{{ user_cacert }}"
 
-
+  - name: create group
+    os_user_group:
+    cloud:
+    user:
+    group:
+    region_name:
+    state:
+    cert:
+    cacert:
+    key:
