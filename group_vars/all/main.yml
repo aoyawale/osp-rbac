@@ -1,20 +1,16 @@
 ---
-# Projects Configuration
-  projects:
-  - project: 90               # Name of team, applied as "conn_name" in role
-    state: "present"             # Start on boot? Default is "yes" if undefined
-    enabled: True    # Set IP address as a host_var
-    project_desc:
-
-
-  - domain:
-    user_domain:
-    domain_status:
-    domain_state:
+# Domain  Configuration
+  domains:
+    user_domain:              # Name of the Domain
+    domain_status:            # Status of the domain
+    domain_state:             # if the domain can be used
+    domain_region:            # The region the domain is in
+    project: 90               # Name of project
+    state: "present"          # State of project
+    enabled: True             # If the project can be used
+    project_desc:             # A description
     region:
-
-
-  - user: 
+    user: 
     user_cert:
     user_key:
     user_cacert:
@@ -25,10 +21,10 @@
     user_project:
     user_endpoint:
 
-  - group:
-    os_user:
-    os_group:
-    group_state:
+            # - group:
+            # os_user:
+            #os_group:
+            #group_state:
     
 
 ...
