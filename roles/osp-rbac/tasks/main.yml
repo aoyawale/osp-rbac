@@ -13,7 +13,7 @@
 
 - name: create a domain
     os_keystone_domain:
-      name: "{{ user_domain }}"
+      name: "{{ domain_name }}"
       enabled: "{{ domain_status }}"
       state: "{{ domain_state }}"
       region_name: "{{ domain_region }}"

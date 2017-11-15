@@ -1,7 +1,10 @@
 ---
 # Domain  Configuration
   domains:
-    user_domain:              # Name of the Domain
+    domain_name:              # Domain Name
+      - prod
+      - dev
+      - int        
     domain_status:            # Status of the domain
     domain_state:             # if the domain can be used
     domain_region:            # The region the domain is in
@@ -9,17 +12,16 @@
     state: "present"          # State of project
     enabled: True             # If the project can be used
     project_desc:             # A description
-    region:
-    user: 
-    user_cert:
-    user_key:
-    user_cacert:
-    user_email:
-    user_status:
-    user_passwd:
-    user_domain:
-    user_project:
-    user_endpoint:
+    user:                     # User being added
+    user_cert:                # User cert
+    user_key:                 # User key
+    user_cacert:              # User CA Certs
+    user_email:               # User email being created
+    user_status:              # Status of the user
+    user_passwd:              # User password
+    user_domain:              # The domain the user is going to be on
+    user_project:             # The project the user is going to be on
+    user_endpoint:            # the endpoint used to talk to the API
 
             # - group:
             # os_user:
